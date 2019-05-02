@@ -39,3 +39,4 @@ VOLUME ["/work"]
 VOLUME ["/jira-shared-home"]
 ENTRYPOINT ["/work-private/docker-entrypoint.sh"]
 CMD ["/jira/atlassian-jira-software-latest-standalone/bin/catalina.sh", "run"]
+
