@@ -36,6 +36,7 @@ RUN chmod u+rx,g+rx,o+rx,a-w /work-private/docker-entrypoint.sh && \
     sed -i -e 's/AllowOverride\s*None/AllowOverride All/ig' /etc/apache2/httpd.conf && \
     echo "Include /work-private/loadbalancer-virtual-host.conf" >> /etc/apache2/httpd.conf
 
+
 #
 # TEMPLATES
 #
