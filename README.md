@@ -1,2 +1,2 @@
-# jiranode-8.1.0
+# jiranode-8.2.0
 
