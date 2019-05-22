@@ -1,2 +1,2 @@
-# loadbalancer-8.1.0
+# loadbalancer-8.2.0
 
