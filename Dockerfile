@@ -1,5 +1,6 @@
 FROM codeclou/docker-atlassian-base-images:jira-software-8.0.0-m0030-beta
 
+
 #
 # DOCKER ENTRYPOINT
 #
