@@ -32,7 +32,7 @@ RUN chmod u+rx,g+rx,o+rx,a-w /work-private/docker-entrypoint.sh && \
     touch /var/www/logs/access.log && chown -R worker:worker /var/www/logs/access.log && \
     chown -R worker:worker /var/log/apache2 && \
     mkdir /run/apache2 && chown -R worker:worker /run/apache2 && \
-    sed -i -e 's/Listen 80/Listen 1820\nServerName localhost/g' /etc/apache2/httpd.conf && \
+    sed -i -e 's/Listen 80/Listen 1830\nServerName localhost/g' /etc/apache2/httpd.conf && \
     sed -i -e 's/AllowOverride\s*None/AllowOverride All/ig' /etc/apache2/httpd.conf && \
     echo "Include /work-private/loadbalancer-virtual-host.conf" >> /etc/apache2/httpd.conf
 
@@ -49,7 +49,7 @@ RUN chown -R worker /work-private/* && chmod -R a+x /work-private
 # WORKDIR
 #
 WORKDIR /work
-EXPOSE 1820
+EXPOSE 1830
 
 #
 # RUN
