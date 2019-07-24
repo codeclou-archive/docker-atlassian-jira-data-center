@@ -52,6 +52,8 @@ Backup Database
 pg_dump -d jira -h 192.168.178.11 -p 5432  -U jira --file=/tmp/jira-8.3.0-postgresql.dump
 ```
 
+Remove all the cluter from top of the dump, so that only plain CREATE TABLE and INSERT statements
+are left.
 
 ### Manual Startup Test of DB
 
