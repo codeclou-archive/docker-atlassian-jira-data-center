@@ -9,8 +9,8 @@ RUN chmod u+rx,g+rx,o+rx,a-w /work-private/docker-entrypoint.sh
 #
 # CONF
 #
-COPY dbconfig.xml /jira-home/dbconfig.xml
-RUN chmod u+rx,g+rx,o+wrx  /jira-home/dbconfig.xml
+COPY dbconfig.xml /work-private/dbconfig.xml
+RUN chmod u+rx,g+rx,o+wrx  /work-private/dbconfig.xml
 COPY cluster.properties.jinja2 /work-private/cluster.properties.jinja2
 RUN chmod u+rx,g+rx,o+rx,a-w /work-private/cluster.properties.jinja2
 
