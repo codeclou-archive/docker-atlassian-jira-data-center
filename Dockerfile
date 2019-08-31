@@ -26,18 +26,6 @@ EXPOSE 40001
 # JIRA Cluster EHCache Multicast Port - see: https://forums.rancher.com/t/solved-problems-multicast-ehcache/1507/7
 EXPOSE 4446
 
-#
-# PRE-BUILT HOME DIRS
-#
-COPY jira-home-8.3.0.tar.bz2 /work-private/jira-home-8.3.0.tar.bz2
-RUN chmod u+rx,g+rx,o+rx,a-w /work-private/jira-home-8.3.0.tar.bz2
-
-COPY jira-shared-home-8.3.0.tar.bz2 /work-private/jira-shared-home-8.3.0.tar.bz2
-RUN chmod u+rx,g+rx,o+rx,a-w /work-private/jira-shared-home-8.3.0.tar.bz2
-
-COPY dbconfig.xml /work-private/dbconfig.xml
-RUN chmod u+rx,g+rx,o+rx,a-w /work-private/dbconfig.xml
-
 
 #
 # RUN
