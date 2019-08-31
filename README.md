@@ -1,20 +1,20 @@
-# jiranode-8.3.0
+# jiranode-8.4.0-m0003
 
 
 
-### Since Jira 8.3.0 
+### Since Jira 8.4.0-m0003 
 
-Since Jira 8.3.0 we provide Jira "pre installed" since there is a problem
+Since Jira 8.4.0-m0003 we provide Jira "pre installed" since there is a problem
 with the cluster.properties.
 
 
 ### Howto Create Home-Dir Zips and DB Dump
 
 ```
-docker build . -t j830
+docker build . -t j840
 docker run -d -p 5432:5432 -e POSTGRES_PASSWORD=jira -e POSTGRES_USER=jira postgres:9.4
 
-docker run -i -t -p 8080:8080 j830 bash
+docker run -i -t -p 8080:8080 j840 bash
 ```
 
 Inside Docker
@@ -35,12 +35,12 @@ Do full setup of Database and admin user, then shutdown with CTRL+C
 # HOME DIR
 cd /jira-home
 rm -rf ./plugins/.osgi-plugins/felix/felix-cache/*
-tar cfjv ../jira-home-8.3.0.tar.bz2 *
+tar cfjv ../jira-home-8.4.0-m0003.tar.bz2 *
 # 29 MB
 #
 # SHARED HOME
 cd /jira-shared-home/
-tar cfjv ../jira-shared-home-8.3.0.tar.bz2 *
+tar cfjv ../jira-shared-home-8.4.0-m0003.tar.bz2 *
 # 21 MB
 ```
 
@@ -49,7 +49,7 @@ tar cfjv ../jira-shared-home-8.3.0.tar.bz2 *
 Backup Database
 
 ```
-pg_dump -d jira -h 192.168.178.11 -p 5432  -U jira --file=/tmp/jira-8.3.0-postgresql.dump
+pg_dump -d jira -h 192.168.178.11 -p 5432  -U jira --file=/tmp/jira-8.4.0-m0003-postgresql.dump
 ```
 
 Remove all the cluter from top of the dump, so that only plain CREATE TABLE and INSERT statements
