@@ -2,7 +2,6 @@
 
 [![](https://codeclou.github.io/doc/badges/generated/docker-image-size-500.svg?v2)](https://hub.docker.com/r/codeclou/docker-atlassian-jira-data-center/tags/)  [![](https://codeclou.github.io/doc/badges/generated/docker-run-as-non-root.svg)](https://docs.docker.com/engine/reference/builder/#/user)
 
-[![](https://codeclou.github.io/docker-atlassian-jira-data-center/img/manage-jira-cluster-logo.svg)](https://github.com/codeclou/docker-atlassian-jira-data-center)
 
 ## Version 8.4.0-m0003
 
@@ -10,8 +9,6 @@ Start an [Atlassian Jira Software Data Center](https://de.atlassian.com/enterpri
 It starts a PostgreSQL Database, several Jira Software cluster nodes and Apache2 HTTPD as sticky session loadbalancer. The shared jira-home is handled via a shared Docker volume.
 
 &nbsp;
-
-<p align="center"><img src="https://codeclou.github.io/docker-atlassian-jira-data-center/7.3.3/img/demo.gif?v2" width="80%"/></p>
 
 
 -----
